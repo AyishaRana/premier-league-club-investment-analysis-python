@@ -59,7 +59,7 @@ The management of the firm aims to invest in one of the top-performing club in t
 - The average number of matches played by each team in the tournament is 573.75, while the mean number of goals scored by all teams is 769. However, the median number of goals scored is much lower at 462, indicating that some teams have scored 	significantly more goals than others.
 - Interestingly, the median number of wins and runners-up positions are both 0, suggesting that most teams have not won or finished as runners-up in the tournament. However, **there is one team that has won the tournament a remarkable 13 times and another team that has been the runners-up 7 times.** It would be interesting to find out which teams these are.
 - **upon analysis, We have found that Manchester United has won Premier league 13 times and have been runner-up 7 times.**
-## visualize each column
+## Visualize each column
 ###### Start with Matches Played column
 ###### plot histogram
 ![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/Histogram%20of%20Matches%20Played%20column.png)
