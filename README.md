@@ -8,7 +8,6 @@ The management of the firm aims to invest in one of the top-performing club in t
 
 
 ## Column name & description
-![image](https://github.com/aditigangar-dataanalystduo/football-players-data-analysis/assets/110927056/07ccc1bb-e001-4783-9eec-e5713b1be796)
 
 - Club: Name of the football club
 - Matches: Number of matches the club has played in the Premier League
@@ -23,22 +22,29 @@ The management of the firm aims to invest in one of the top-performing club in t
 
 
 ## Section A: Explore the Dataset
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/1st%20five%20rows.png)
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/last%20five%20rows.png)
 - Upon examining the dataset, **we note that it consists of 11 columns**, with the first column containing the club name and the remaining 10 columns providing information on the club's performance in the Premier League. However, the data is not entirely clean. **The club column has numerical values attached to it, likely indicating a serial number, and the runners-up column has null values.**
 - **Noticed inconsistencies in the TeamLaunch column**. While most clubs have a year mentioned, one club has a month & year mentioned instead. This inconsistency may cause problems in the analysis, and the column should be cleaned. **Furthermore, we observe that 	there are null values in the Winners column.**
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/data%20info.png)
 - **We also notice that the data type for the Runners-up column is non-numeric (i.e., object type).** To perform any numerical analysis 	on this column, we will need to convert it to a numeric data type.
 
 ## Section B: Clean the Dataset
 #### Start with Club column
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/1st%20five%20rows%202.png)
 - the numbers have been removed from the front of each club name in the Club column, it has been cleaned and is ready to be used for analysis.
 #### Next, Winners column
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/winners%20column%20info.png)
 - Upon inspecting the dataset, **it can be observed that there are a total of 25 non-null values.** Furthermore, it is noteworthy that 	out of the 18 football clubs listed, none of them have won the Premier League title, as the Winners column displays a count of 0 for each club.	
 - **After looking at the counts, it has been determined that there have been a total of 30 Premier League tournaments held in the past (1992-2022 per year one tournament). Out of the 25 football clubs (Non zero non nulls in winner columns) listed in the dataset, 3 clubs have won the Premier League title once, 1 club has won it thrice, 1 club has won it 5 times, another club has won it 6 times, and 1 club has won it a remarkable 13 times, totaling to 30 victories.**
 - This implies that all other clubs in the dataset have not won any Premier League matches.
 - Therefore, **updated the Winners column by replacing the null values with 0**, as these clubs have not won the Premier League title. 
 #### Next, Runners-up column 
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/Runners-up%20column%20info.png)
 - We noticed some inconsistency in data, **this column particularly has null values, 0's and '-' We need to clean.**
 - Since we know the no. of times Premier League was conducted is 30 and we have data for all. so **converted the null & '-' to 0** for all other clubs.
 - Also **'Runners-up' column is Object type, we converted it into int type.**
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/data%20info%202.png)
 #### Next, TeamLaunch column
 - Noticed inconsistencies in the TeamLaunch column. **While most clubs have a year mentioned, one club has a month & year mentioned instead.** 
 - **converted the column to YYYY format.**
@@ -47,6 +53,7 @@ The management of the firm aims to invest in one of the top-performing club in t
 
 ## Section C: Deep dive into Data Analysis
 #### Calculate basic data summaries
+![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/data%20summary.png)
 -  **Observation:** 
 - The average number of matches played by each team in the tournament is 573.75, while the mean number of goals scored by all teams is 769. However, the median number of goals scored is much lower at 462, indicating that some teams have scored 	significantly more goals than others.
 - Interestingly, the median number of wins and runners-up positions are both 0, suggesting that most teams have not won or finished as runners-up in the tournament. However, **there is one team that has won the tournament a remarkable 13 times and another team that has been the runners-up 7 times.** It would be interesting to find out which teams these are.
