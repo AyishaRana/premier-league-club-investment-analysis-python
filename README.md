@@ -59,8 +59,8 @@ The management of the firm aims to invest in one of the top-performing club in t
 - The average number of matches played by each team in the tournament is 573.75, while the mean number of goals scored by all teams is 769. However, the median number of goals scored is much lower at 462, indicating that some teams have scored 	significantly more goals than others.
 - Interestingly, the median number of wins and runners-up positions are both 0, suggesting that most teams have not won or finished as runners-up in the tournament. However, **there is one team that has won the tournament a remarkable 13 times and another team that has been the runners-up 7 times.** It would be interesting to find out which teams these are.
 - **upon analysis, We have found that Manchester United has won Premier league 13 times and have been runner-up 7 times.**
-#### visualize each column
-##### Start with Matches Played column
+## visualize each column
+###### Start with Matches Played column
 ###### plot histogram
 ![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/Histogram%20of%20Matches%20Played%20column.png)
 -  **Observation:** 
@@ -72,13 +72,13 @@ The management of the firm aims to invest in one of the top-performing club in t
 - Upon analysis, **we have observed that there are a total of 11 clubs who have significantly more experience in the Premier League as compared to the others.** These clubs have played a higher number of matches and have established themselves as experienced players in the league.
 - As per the client's requirements, we are interested in identifying potential clubs that may perform well in the future, even if they have less experience in the Premier League. Therefore, **we have decided to drop these 11 clubs from our analysis, as their established presence in the league may skew our results and make it difficult to identify less experienced clubs with high 	potential.**
 - By removing these clubs, we can focus our analysis on the remaining clubs and potentially identify hidden gems that may have been overlooked due to their lack of experience in the league.
-#### Now, look at Win, Loss, Drawn, and clean sheets column
+###### Now, look at Win, Loss, Drawn, and clean sheets column
 - To accurately analyze the performance of the teams, we must normalize the data by dividing the no. of wins, loss, drawn, clean sheet, goals by the number of matches played.
 - This normalization will provide us with a fair idea of the winning, losing, draw, and clean sheet percentages of each team along with goals per match.
-##### Created new columns for Winning Rate, Loss Rate, Draw Rate, & Clean Sheet Rate
-##### Created a column for average goals scored per match
+- Created new columns for Winning Rate, Loss Rate, Draw Rate, & Clean Sheet Rate
+- Created a column for average goals scored per match
 ![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/Added%20columns.png)
-#### Now let us visualize Winning, Loss, Drawn rate, and Clean Sheet
+###### Now visualize Winning, Loss, Drawn rate, and Clean Sheet
 ###### Create the boxplot
 ![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/Boxplot.png)
 -  **Observation:** 
@@ -114,6 +114,7 @@ We see that data for Clean Sheet rate is pretty symmetric.
 - Out of the total 29 teams, **eight are currently playing in the Premier League.** Since these teams are currently active in the league, it makes sense to prioritize them in our analysis. However, there are also teams that date back as early as 2000. It may be appropriate to assign these teams less weight.
 ##### Checked the eight teams that are currently playing in the Premier League
 - Giving more priority to teams that have more recent experience playing in the Premier League is ideal. When making the final decision, we will assign higher weight to teams that have played more recently, and lesser weight to those that have not played recently.
+
 ![image](https://raw.githubusercontent.com/AyishaRana/premier-league-club-investment-analysis-python/refs/heads/main/Output/8%20clubs.png)
 ## Section D: Final Recommendations Framework
 - created an empty Score column.
